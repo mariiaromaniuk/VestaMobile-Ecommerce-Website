@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>VestaMobile</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+
+<style type="text/css">
+#content
+{ text-align: left;
+width: 613px;
+padding: 0;}
+.form_settings
+{ margin: 15px 10px 10px 300px;}
+
+.form_settings p
+{ padding: 0 0 4px 0;}
+
+.form_settings span
+{ float: left;
+width: 200px;
+text-align: left;}
+
+.form_settings input, .form_settings textarea
+{ padding: 5px;
+width: 260px;
+font: 100% arial;
+border: 1px solid #E5E5DB;
+background: #FFF;
+color: #47433F;}
+
+.form_settings .submit
+{ font: 100% arial;
+border: 2px;
+width: 99px;
+//margin: 0 0 0 212px;
+margin: 1 1 1 1;
+height: 33px;
+padding: 2px 0 3px 0;
+cursor: pointer;
+background: #3B3B3B;
+color: #FFF;}
+
+.form_settings textarea, .form_settings select
+{ font: 100% arial;
+width: 299px;}
+
+.form_settings select
+{ width: 310px;}
+
+.form_settings .checkbox
+{ margin: 4px 0;
+padding: 0;
+width: 14px;
+border: 0;
+background: none;}
+</style>
+
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.jcarousel.pack.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.jcarousel.setup.js"></script>
+<script type="text/javascript" src="cookiemngr.js"></script>
+<script type="text/javascript" src="cookiemngr.js"></script>
+<script type="text/javascript">
+function register()
+{
+	var userid=document.getElementById("userid");
+	var password=document.getElementById("password");
+	var password2=document.getElementById("password2");
+	if(getCookie(userid.value)==null)
+	{
+			if(password.value == password2.value)
+			{
+				setCookie(userid.value,password.value,30);
+				alert("Congratulations, you have register successfully");
+				location.href="index.html";
+			}
+			else
+			{
+				alert("Passwords Dont Match");
+				password.value=password2.value="";
+			}
+	}
+	else
+	{
+		alert("UserId already Taken.Try Again");
+		userid.value=password.value=password2.value="";
+	}
+}
+</script>
+</head>
+<body id="top">
+<!-- ####################################################################################################### -->
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="index.html">VESTA MOBILE</a></h1>
+      <p>Buy Mobile Phones Online</p>
+    </div>
+    <div id="topnav">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html">Products</a>
+          <ul>
+            <li><a href="item1.html">iPhone XS</a></li>
+            <li><a href="item2.html">Google Pixel</a></li>
+            <li><a href="item3.html">Samsung S9</a></li>
+          </ul>
+        </li>
+		<li><a href="contact.html">Contact</a></li>
+		<li><a href="cart.html">Shopping Cart</a></li>
+        <li class="first active">
+            <script type="text/javascript">
+            if(getCookie("valid") =="true") document.writeln("<a href='logoff.html'>Logoff</a>");
+            else document.writeln("<a href='login.html'>Login</a>");
+            </script>
+        </li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+
+
+        <li><img src="" alt="" />
+            <h1 style="font: normal 179% 'century gothic', arial, sans-serif;color: black;margin: 0 0 15px 0;padding: 15px 15px 5px 300px;" >Registration</h1>
+            <form action="#" method="post">
+            <div class="form_settings">
+            <p><span>Username</span><input class="contact" type="text"  id="userid" value="" /></p>
+            <p><span>Password</span><input class="contact" type="text"  id="password" value="" /></p>
+            <p><span>Password2</span><input class="contact" type="text" id="password2" value="" /></p>
+            <p style="padding-top: 15px"><span>&nbsp;&nbsp;&nbsp;</span><input class="submit" type="submit"  value="submit"  onclick="register();" /><br />
+				<br />&nbsp;<span>&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: underline;" href="login.html">Login</a></p>
+            <p style="padding-bottom: 76px">
+            </div>
+            </form>
+        </li>
+
+<!-- ####################################################################################################### -->
+<div class="wrapper col4">
+  <div id="footer">
+    <div class="box1">
+      <h2>Why choosing Vesta Mobile?</h2>
+      <img class="imgl" src="images/demo/imgl.jpg" width="100px" alt="" />
+      <p>Vesta Mobile offers competitive pricing on its unparalleled product selection, with a firm commitment to on-time order fulfillment.
+         We offer detailed product information, peer reviews, expert opinions, product tutorials and the opportunity to network with other members of the Vesta Mobile community.
+         Customer satisfaction is Vesta Mobile's top priority, achieved by delivering superior service with our ever-present philosophy of putting the customer first.</p>
+    </div>
+    <div class="box contactdetails">
+      <h2>Our Contact Details</h2>
+      <ul>
+        <li>Vesta Mobile</li>
+        <li>55 Chambers Street</li>
+        <li>New York, NY, 10007</li>
+        <li>Tel: (833) 224-6600</li>
+        <li>Fax: (833) 324-5670</li>
+        <li>Email: contact@vestamobile.net</li>
+        <li class="last">LinkedIn: <a href="#">@vesta_mobile</a></li>
+      </ul>
+    </div>
+    <div class="box flickrbox">
+      <h2>Latest Flickr Images</h2>
+      <div class="wrap">
+        <div class="fix"></div>
+        <div class="flickr_badge_image" id="flickr_badge_image1"><img src="images/demo/4.jpg" width="80px" alt="" /></a></div>
+        <div class="flickr_badge_image" id="flickr_badge_image2"><img src="images/demo/5.jpg" width="80px" alt="" /></a></div>
+        <div class="flickr_badge_image" id="flickr_badge_image3"><img src="images/demo/7.jpg" width="80px" alt="" /></a></div>
+        <div class="flickr_badge_image" id="flickr_badge_image4"><img src="images/demo/8.jpg" width="80px" alt="" /></a></div>
+        <div class="flickr_badge_image" id="flickr_badge_image5"><img src="images/demo/6.jpg" width="80px" alt="" /></a></div>
+        <div class="flickr_badge_image" id="flickr_badge_image6"><img src="images/demo/9.jpg" width="80px" alt="" /></a></div>
+        <div class="fix"></div>
+      </div>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col5">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<html>
+<head>
+<style type="text/css">
+table,td,input[type="button"],input[type="text"]{border:solid black 2px;font-size:small;}
+.division{border:solid black 2px;background-color:#CCCCCC;margin:2px;padding:1px;font-size:small;}
+th{text-align:center;background:black; color:white;padding:4px;}
+div.v0{ width:100%;}
+div.v1{ width:50%; margin:0px auto; background-color:#EEEEEE;}
+</style>
+<script type-'text/javascript'>
+function setCookie(name,value,days)
+{
+	var x=new Date();
+	x.setTime(x.getTime() + (days*24*60*60*1000));
+	document.cookie=name+"="+value+ "; expires="+x.toGMTString()+"; path=/";
+} 
+function getCookie(cookie2find)
+{
+	var cookievalue="",str=document.cookie;
+	var A=str.split("; ");
+	for(var i=0;i<A.length;i++)
+	{
+		var B=A[i].split("=");
+		if(B[0]==cookie2find){cookievalue=B[1];break;}
+	}
+	return cookievalue;
+}
+function getraw(){return document.cookie;}
+//-----------------------------------------------------------------
+function create()
+{
+	var days=1;
+	var cname=document.getElementById("cname");
+	var cvalue=document.getElementById("cvalue");
+	setCookie(cname.value,cvalue.value,days);
+}
+function delete1()
+{
+	var cname3=document.getElementById("cname3");
+	setCookie(cname3.value,"",-1);  
+}
+function raw(){ document.getElementById("raw").value=getraw();}
+function findcookie()
+{
+	var finditem=document.getElementById("cname2").value;
+	document.getElementById('cvalue2').value=getCookie(finditem);
+}
+function details()
+{
+	var cookievalue="",str=document.cookie;
+	var A=str.split(";");
+	var x="<table style='width:50%;'><tr><th colspan='2'>COOKIE LISTING</th></tr>";
+	x+="<tr><th>COOKIE</th><th>VALUE</th></tr>";
+	if(document.cookie.length !=0)
+	for(var i=0;i<A.length;i++)
+	{
+		var B=A[i].split("=");
+		x+="<tr><td style='width:10;'>"+B[0]+"</td><td style='width:10;'>"+B[1]+"</td></tr>";
+	}
+	x+="</table>";
+	document.getElementById('info').innerHTML=x;
+}
+function clearbox(idname){document.getElementById(idname).value="";}
+</script>
+<title>COOKIE MANAGER</title>
+</head>
+<body onload="details()">
+<div class="v0"><div class="v1">
+	<div class="division" style="font-size:1.5em;text-align:center;background:black; color:white;">COOKIE MANAGER</div>
+	<div class="division">
+		Name:<input id="cname" type="text"size="10">
+		Value: <input id="cvalue" type="text"size="10">
+		<input type="button"value="SetCookie"onclick="create();details()"/>
+		<input type="button"value="Clear" onclick="clearbox('cname');clearbox('cvalue');"/>
+	</div>
+	<div class="division">
+		Name:<input id="cname2" type="text"size="10">
+		Value: <input id="cvalue2" type="text"size="10">
+		<input type="button" value="GetCookie" onclick="findcookie()"/>
+		<input type="button"value="Clear" onclick="clearbox('cname2');clearbox('cvalue2');"/>
+	</div>
+	<div class="division">
+		Name:<input id="cname3" type="text" size="10">
+		<input type="button"value="DelCookie" onclick="delete1();details();"/>
+		<input type="button"value="Clear" onclick="clearbox('cname3');"/>
+	</div>
+	<div class="division">
+		<input id="raw" type="text" size="35">
+		<input type="button" value="RawCookie" onClick="raw();details();"/>
+		<input type="button"value="Clear"onclick="clearbox('raw');"/>
+	</div>
+	
+<div id='info' class="division"></div>
+</body> 
+</html>

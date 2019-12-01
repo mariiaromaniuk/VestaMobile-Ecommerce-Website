@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>VestaMobile</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.jcarousel.pack.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.jcarousel.setup.js"></script>
+<script src="cookiemngr.js" type="text/javascript"></script>
+<script type="text/javascript">
+  if(getCookie("valid") !="true") location.href="login.html";
+</script>
+</head>
+<body id="top">
+<!-- ####################################################################################################### -->
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="index.html">VESTA MOBILE</a></h1>
+      <p>Buy Mobile Phones Online</p>
+    </div>
+    <div id="topnav">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html">Products</a>
+          <ul>
+            <li><a href="item1.html">iPhone XS</a></li>
+            <li><a href="item2.html">Google Pixel</a></li>
+            <li><a href="item3.html">Samsung S9</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Shopping Cart</a></li>
+        <li class="first active">
+        <script>
+         if(getCookie("valid") =="true") document.writeln("<a href='logoff.html'>Logoff</a>");
+         else document.writeln("<a href='login.html'>Login</a>");
+         </script>
+        </li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="featured_slide">
+    <div id="featured_content">
+      <ul>
+          <li><img src="images/demo/2.gif" alt="" />
+            <div class="floater">
+              <h2>Google Pixel 3 - $800</h2>
+              <p>Google Lens. Search what you see with Google Lens to look up clothing and home decor, copy and translate text, and identify landmarks, plants and animals - all in real-time, right from your camera.
+                 Group Selfies. Pixel 3's dual front-facing cameras let you take Group Selfies without a selfie stick or someone having to jump out and take the photo. Or, use it to get the background in that selfie without being a bobble head.</p>
+              <p class="readmore"><a href="#" onclick="alert('Added to Shopping Cart');setCookie('GooglePixel3','1',800);" style="color:white;">Add to Cart &raquo;</a>&nbsp;&nbsp;<a href="cart.html" style="color:white;">Go To Cart &raquo;</a>
+            </div>
+          </li>
+      </ul>
+    </div>
+
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+  <div id="container">
+    <div class="homepage">
+        <p>+ Google Lens. Search what you see with Google Lens to look up clothing and home decor, copy and translate text, and identify landmarks, plants and animals - all in real-time, right from your camera.</p>
+        <p>+ Group Selfies. Pixel 3's dual front-facing cameras let you take Group Selfies without a selfie stick or someone having to jump out and take the photo. Or, use it to get the background in that selfie without being a bobble head.</p>
+        <p>+ Your Google Assistant. Get help from the Google Assistant: reserve a table at your favorite restaurant, buy tickets, get commute times, weather info, flight updates, and more - all with a simple squeeze, or just by using your voice.</p>
+
+      <br class="clear" />
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col4">
+  <div id="footer">
+    <div class="box1">
+      <h2>Why choosing Vesta Mobile?</h2>
+      <img class="imgl" src="images/demo/imgl.jpg" width="100px" alt="" />
+      <p>Vesta Mobile offers competitive pricing on its unparalleled product selection, with a firm commitment to on-time order fulfillment.
+         We offer detailed product information, peer reviews, expert opinions, product tutorials and the opportunity to network with other members of the Vesta Mobile community.
+         Customer satisfaction is Vesta Mobile's top priority, achieved by delivering superior service with our ever-present philosophy of putting the customer first.</p>
+    </div>
+    <div class="box contactdetails">
+      <h2>Our Contact Details</h2>
+      <ul>
+        <li>Vesta Mobile</li>
+        <li>55 Chambers Street</li>
+        <li>New York, NY, 10007</li>
+        <li>Tel: (833) 224-6600</li>
+        <li>Fax: (833) 324-5670</li>
+        <li>Email: contact@vestamobile.net</li>
+        <li class="last">LinkedIn: <a href="#">@vesta_mobile</a></li>
+      </ul>
+    </div>
+    <div class="box flickrbox">
+      <h2>Latest Flickr Images</h2>
+      <div class="wrap">
+        <div class="fix"></div>
+        <div class="flickr_badge_image" id="flickr_badge_image1"><img src="images/demo/4.jpg" width="80px" alt="" /></a></div>
+        <div class="flickr_badge_image" id="flickr_badge_image2"><img src="images/demo/5.jpg" width="80px" alt="" /></a></div>
+        <div class="flickr_badge_image" id="flickr_badge_image3"><img src="images/demo/7.jpg" width="80px" alt="" /></a></div>
+        <div class="flickr_badge_image" id="flickr_badge_image4"><img src="images/demo/8.jpg" width="80px" alt="" /></a></div>
+        <div class="flickr_badge_image" id="flickr_badge_image5"><img src="images/demo/6.jpg" width="80px" alt="" /></a></div>
+        <div class="flickr_badge_image" id="flickr_badge_image6"><img src="images/demo/9.jpg" width="80px" alt="" /></a></div>
+        <div class="fix"></div>
+      </div>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col5">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>
