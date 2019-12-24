@@ -1,18 +1,10 @@
 @charset "utf-8";
-/*
-Template Name: PlusBusiness
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
-File: Forms CSS
-*/
 
 form, fieldset, legend{margin:0; padding:0; border:none;}
 legend{display:none;}
 input, textarea, select{font-size:12px; font-family:Verdana, Arial, Helvetica, sans-serif;}
 
-/* ----------------------------------------------Forms in Content Area------------------------------------- */
+/* -----------------------------------------Forms in Content Area------------------------------------- */
 
 #container #respond{display:block; width:100%;}
 #container #respond input{width:170px; padding:2px; border:1px solid #CCCCCC; margin:5px 5px 0 0;}
